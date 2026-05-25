@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nora Vertus — Studio</title>
+<meta name="description" content="Nora Vertus is a designer working in identity, campaigns, and editorial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #EDE5D2;
+  --surface: #FAF4E6;
+  --ink: #1A1A1A;
+  --muted: rgba(26,26,26,0.6);
+  --line: rgba(26,26,26,0.18);
+  --red: #FF5238;
+  --cobalt: #1B4FDB;
+  --yellow: #F5C544;
+  --pink: #F3B8C9;
+  --cream: #FAF4E6;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+.page { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+.nav { display: flex; justify-content: space-between; align-items: baseline; padding: 28px 0 20px; border-bottom: 1px solid var(--line); font-size: 14px; position: sticky; top: 0; background: var(--bg); z-index: 10; }
+.nav-mark { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 500; letter-spacing: -0.01em; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { color: var(--ink); text-decoration: none; opacity: 0.75; }
+.nav-links a:hover { opacity: 1; }
+
+.hero { padding: 80px 0 64px; }
+.hero h1 { font-family: 'Fraunces', serif; font-size: 92px; font-weight: 500; letter-spacing: -0.03em; line-height: 0.98; margin: 0 0 24px; max-width: 920px; }
+.hero h1 em { font-style: italic; color: var(--red); }
+.hero p { font-size: 22px; max-width: 620px; opacity: 0.78; line-height: 1.45; }
+
+.section { padding: 64px 0; border-top: 1px solid var(--line); }
+.section-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.16em; opacity: 0.6; font-weight: 500; margin-bottom: 32px; display: flex; justify-content: space-between; align-items: baseline; }
+.section-label span:last-child { font-family: 'Fraunces', serif; font-style: italic; font-size: 14px; text-transform: none; letter-spacing: 0; }
+
+.proj-title-row { display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px; align-items: end; margin-bottom: 32px; }
+.proj-title { font-family: 'Fraunces', serif; font-size: 56px; font-weight: 500; letter-spacing: -0.025em; line-height: 0.95; margin: 0; }
+.proj-title em { font-style: italic; color: var(--red); }
+.proj-sub { font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; opacity: 0.7; line-height: 1.3; padding-bottom: 6px; }
+
+.proj-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding: 20px 0; border-top: 0.5px solid var(--line); border-bottom: 0.5px solid var(--line); margin-bottom: 36px; }
+.proj-meta-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; opacity: 0.55; margin-bottom: 4px; font-weight: 500; }
+.proj-meta-value { font-size: 14px; font-weight: 500; }
+
+.proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.proj-tall { grid-column: span 1; }
+.preview { border-radius: 12px; overflow: hidden; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; position: relative; aspect-ratio: 1; }
+.preview-tall { aspect-ratio: 4 / 5; }
+.preview-wide { aspect-ratio: 8 / 5; grid-column: span 2; }
+.pv-red { background: var(--red); color: var(--cream); }
+.pv-cobalt { background: var(--cobalt); color: var(--cream); }
+.pv-yellow { background: var(--yellow); color: var(--ink); }
+.pv-pink { background: var(--pink); color: var(--ink); }
+.pv-cream { background: var(--cream); color: var(--ink); border: 0.5px solid var(--line); }
+.pv-charcoal { background: var(--ink); color: var(--cream); }
+
+.fra { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.025em; line-height: 0.95; }
+.fra em { font-style: italic; }
+.mk-22 { font-size: 22px; }
+.mk-28 { font-size: 28px; }
+.mk-36 { font-size: 36px; }
+.mk-48 { font-size: 48px; }
+.mk-64 { font-size: 64px; }
+.foot-tag { font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 500; opacity: 0.7; }
+.pv-head-row { display: flex; justify-content: space-between; align-items: flex-start; }
+
+.proj-desc { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 32px 0; }
+.proj-desc p { font-size: 16px; line-height: 1.75; opacity: 0.85; }
+.proj-desc p + p { margin-top: 16px; }
+.proj-link { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
+
+.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.work-card { display: flex; flex-direction: column; gap: 12px; cursor: pointer; }
+.work-thumb { width: 100%; aspect-ratio: 4 / 3; border-radius: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 24px; text-align: center; }
+.work-row { display: flex; justify-content: space-between; align-items: baseline; }
+.work-name { font-size: 15px; font-weight: 500; }
+.work-tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.55; font-weight: 500; }
+.work-placeholder { background: var(--surface); border: 0.5px dashed var(--line); color: var(--muted); font-family: 'Fraunces', serif; font-style: italic; font-size: 16px; }
+
+.about { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: start; }
+.about-text { font-size: 18px; line-height: 1.7; }
+.about-text p { margin: 0 0 1.25rem; }
+.about-text em { font-style: italic; }
+.about-side { padding: 28px; background: var(--yellow); border-radius: 12px; display: flex; flex-direction: column; gap: 12px; }
+.about-side-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; opacity: 0.55; font-weight: 500; }
+.about-side-line { font-size: 14px; }
+
+.contact { padding: 48px 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: end; }
+.contact-h { font-family: 'Fraunces', serif; font-size: 48px; font-weight: 500; letter-spacing: -0.025em; line-height: 1; margin: 0; }
+.contact-h em { font-style: italic; color: var(--red); }
+.contact-list { font-size: 16px; line-height: 2; }
+.contact-list a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+
+footer { padding: 24px 0 48px; border-top: 1px solid var(--line); margin-top: 48px; font-size: 12px; opacity: 0.5; display: flex; justify-content: space-between; }
+
+@media (max-width: 800px) {
+  .hero h1 { font-size: 56px; }
+  .hero p { font-size: 18px; }
+  .proj-title-row { grid-template-columns: 1fr; gap: 12px; }
+  .proj-title { font-size: 40px; }
+  .proj-meta { grid-template-columns: 1fr 1fr; }
+  .proj-grid { grid-template-columns: 1fr; }
+  .preview-wide { grid-column: span 1; aspect-ratio: 4/3; }
+  .proj-desc { grid-template-columns: 1fr; gap: 0; }
+  .work-grid { grid-template-columns: 1fr; }
+  .about { grid-template-columns: 1fr; gap: 32px; }
+  .contact { grid-template-columns: 1fr; }
+  .contact-h { font-size: 36px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<nav class="nav">
+  <span class="nav-mark">Nora Vertus — Studio</span>
+  <div class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Interested in the things people pass on — and the work it takes to make them <em>feel chosen.</em></h1>
+  <p>Designer working in identity, campaigns, and editorial. Currently building toward intentional, voice-led work that earns its place rather than chases the trend.</p>
+</section>
+
+<section class="section" id="work">
+  <p class="section-label"><span>Featured project</span><span>01 / 03</span></p>
+
+  <div class="proj-title-row">
+    <h2 class="proj-title">Repair <em>Club</em></h2>
+    <p class="proj-sub">A fictional community repair café where membership is free — the only rule is showing up with something broken.</p>
+  </div>
+
+  <div class="proj-meta">
+    <div><p class="proj-meta-label">Year</p><p class="proj-meta-value">2026</p></div>
+    <div><p class="proj-meta-label">Role</p><p class="proj-meta-value">Direction · Design · Copy</p></div>
+    <div><p class="proj-meta-label">Scope</p><p class="proj-meta-value">Identity · print · web · interactive</p></div>
+    <div><p class="proj-meta-label">Tools</p><p class="proj-meta-value">Affinity · Krea · HTML/JS</p></div>
+  </div>
+
+  <div class="proj-grid">
+
+    <div class="preview pv-red preview-wide">
+      <div class="pv-head-row">
+        <span class="fra mk-22">Repair <em style="color:var(--yellow);">Club</em></span>
+        <span class="foot-tag">Saturday · Repair fair 002</span>
+      </div>
+      <h3 class="fra mk-64">Bring<br>something<br><em style="color:var(--yellow);">broken.</em></h3>
+      <span class="foot-tag" style="opacity:0.85;">Sat 18 May · 10 am – 2 pm · 1429 Cooper St · Free entry</span>
+    </div>
+
+    <div class="preview pv-cream">
+      <div class="pv-head-row">
+        <span class="fra mk-22">Repair <em style="color:var(--red);">Club</em></span>
+        <span class="foot-tag" style="opacity:0.55;">Wordmark · primary</span>
+      </div>
+      <div class="fra mk-48" style="margin: auto 0;">Repair <em style="color:var(--red);">Club</em>.</div>
+      <span class="foot-tag" style="opacity:0.5;">Recoleta · italic accent</span>
+    </div>
+
+    <div class="preview pv-cobalt">
+      <div class="pv-head-row">
+        <span class="fra mk-22">Repair <em style="color:var(--yellow);">Club</em></span>
+        <span class="foot-tag" style="opacity:0.7;">Postcard · membership</span>
+      </div>
+      <h3 class="fra mk-28">Membership:<br>bring something<br><em style="color:var(--yellow);">broken.</em></h3>
+      <span class="foot-tag" style="opacity:0.75;">Front · cobalt ground</span>
+    </div>
+
+    <div class="preview pv-yellow">
+      <div class="pv-head-row">
+        <span class="fra mk-22">Repair <em style="color:var(--red);">Club</em></span>
+        <span class="foot-tag" style="opacity:0.6;">IG · this Saturday</span>
+      </div>
+      <h3 class="fra mk-36" style="margin: auto 0;">This<br>Saturday.<br><em style="color:var(--red);">10–2.</em></h3>
+      <span class="foot-tag" style="opacity:0.65;">Social tile · 1080 × 1080</span>
+    </div>
+
+    <div class="preview pv-pink">
+      <div class="pv-head-row">
+        <span class="fra mk-22">Repair <em style="color:var(--red);">Club</em></span>
+        <span class="foot-tag" style="opacity:0.6;">IG · this week's haul</span>
+      </div>
+      <div class="fra" style="font-size: 22px; line-height: 1.3; margin: auto 0;">
+        <div><em style="opacity:0.6; font-size:16px;">01</em> 3 lamps</div>
+        <div><em style="opacity:0.6; font-size:16px;">02</em> 2 jackets</div>
+        <div><em style="opacity:0.6; font-size:16px;">03</em> 1 toaster</div>
+        <div><em style="opacity:0.6; font-size:16px;">04</em> 1 ceramic cat</div>
+      </div>
+      <span class="fra mk-22"><em style="color:var(--red);">All saved.</em></span>
+    </div>
+
+    <div class="preview pv-charcoal preview-wide" style="padding: 40px 44px;">
+      <div class="pv-head-row">
+        <span class="fra mk-22">Repair <em style="color:var(--yellow);">Club</em></span>
+        <span class="foot-tag" style="opacity:0.6;">Web · Repair Diagnostics</span>
+      </div>
+      <div>
+        <p class="foot-tag" style="opacity:0.55; margin-bottom: 10px;">Question 1 of 2</p>
+        <h3 class="fra mk-36" style="margin-bottom: 18px;">What's <em style="color:var(--yellow);">broken?</em></h3>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; max-width: 460px;">
+          <div style="padding: 12px 16px; border: 1px solid rgba(250,244,230,0.4); border-radius: 999px; font-size: 13px;">This jacket</div>
+          <div style="padding: 12px 16px; background: var(--yellow); color: var(--ink); border-radius: 999px; font-size: 13px; font-weight: 500;">This lamp</div>
+          <div style="padding: 12px 16px; border: 1px solid rgba(250,244,230,0.4); border-radius: 999px; font-size: 13px;">This relationship</div>
+          <div style="padding: 12px 16px; border: 1px solid rgba(250,244,230,0.4); border-radius: 999px; font-size: 13px;">This democracy</div>
+        </div>
+      </div>
+      <span class="foot-tag" style="opacity:0.55;">Interactive · embedded in landing page</span>
+    </div>
+
+  </div>
+
+  <div class="proj-desc">
+    <div>
+      <p>The brand name does the work. "Club" reframes repair as something you <em>join</em>, not something you do alone. The conspiratorial wink is built into the premise — you're in on this, with everyone else who's in on it.</p>
+      <p>The visual world is a confident chromatic four — cobalt, red-orange, mustard yellow, lavender pink — held together by a calm cream and charcoal base. No color is "the brand color"; the system flexes piece by piece, the way a real club's materials would.</p>
+    </div>
+    <div>
+      <p>Six deliverables in one cohesive language: wordmark system, event poster, membership postcard, three-piece IG tile series, web landing page, and an embedded two-question interactive quiz called <em>Repair Diagnostics</em>. Built as a parallel project — the system holds at the same scope without burning my real ideas for an applied campaign brief.</p>
+      <a href="#" class="proj-link">See full case study →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <p class="section-label"><span>Selected work</span><span>Three projects shown</span></p>
+  <div class="work-grid">
+
+    <div class="work-card">
+      <div class="work-thumb" style="background: var(--red); color: var(--cream);">
+        <span class="fra mk-36" style="line-height: 0.95;">Repair<br><em style="color:var(--yellow);">Club</em></span>
+      </div>
+      <div class="work-row">
+        <span class="work-name">Repair Club</span>
+        <span class="work-tag">Identity · Campaign</span>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-thumb work-placeholder">In progress — Common Press</div>
+      <div class="work-row">
+        <span class="work-name">Common Press</span>
+        <span class="work-tag">Editorial · Identity</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="about">
+  <p class="section-label"><span>About</span><span>Nora Vertus</span></p>
+  <div class="about">
+    <div class="about-text">
+      <p>I'm a designer working in identity, campaigns, and editorial. I treasure hunt — at thrift stores, in archives, in old type catalogues. The pieces people pass on are almost always the ones with the most to say.</p>
+      <p>My eye comes partly from a Haitian household, where <em>degaje</em> — resourcefulness as artistry — is a quiet form of pride. That lens shapes what I notice and what I make.</p>
+      <p>I use AI tools openly as part of my production process. The voice is mine; the production is faster.</p>
+      <p>Currently: <em>[finishing up your degree / current role — update this line]</em>. Open to new work.</p>
+    </div>
+    <aside class="about-side">
+      <span class="about-side-label">Based in</span>
+      <span class="about-side-line">[Your city]</span>
+      <span class="about-side-label" style="margin-top: 12px;">Available for</span>
+      <span class="about-side-line">Identity, campaign, editorial, web</span>
+      <span class="about-side-label" style="margin-top: 12px;">Tools</span>
+      <span class="about-side-line">Affinity Publisher · Designer · Photo · Canva · Krea · HTML/CSS</span>
+    </aside>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <p class="section-label"><span>Contact</span><span>Say hi</span></p>
+  <div class="contact">
+    <h2 class="contact-h">Got a project? Let's <em>talk.</em></h2>
+    <div class="contact-list">
+      <div><a href="mailto:noravertus@outlook.com">noravertus@outlook.com</a></div>
+      <div><a href="#">Instagram</a></div>
+      <div><a href="#">LinkedIn</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Nora Vertus</span>
+  <span>Built with care · open to work</span>
+</footer>
+
+</div>
+</body>
+</html>
