@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repair Club — Nora Vertus</title>
+<meta name="description" content="Identity, campaign, and interactive work for a fictional community repair café.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #EDE5D2;
+  --surface: #FAF4E6;
+  --ink: #1A1A1A;
+  --muted: rgba(26,26,26,0.65);
+  --line: rgba(26,26,26,0.18);
+  --red: #FF5238;
+  --cobalt: #1B4FDB;
+  --yellow: #F5C544;
+  --pink: #F3B8C9;
+  --cream: #FAF4E6;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+.page { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+
+.nav { display: flex; justify-content: space-between; align-items: baseline; padding: 28px 0 20px; border-bottom: 1px solid var(--line); font-size: 14px; position: sticky; top: 0; background: var(--bg); z-index: 10; }
+.nav-mark { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 500; letter-spacing: -0.01em; }
+.nav-back { color: var(--ink); text-decoration: none; opacity: 0.75; }
+.nav-back:hover { opacity: 1; }
+
+.hero { padding: 80px 0 56px; }
+.hero-eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: 0.16em; opacity: 0.55; font-weight: 500; margin-bottom: 20px; }
+.hero h1 { font-family: 'Fraunces', serif; font-size: 108px; font-weight: 500; letter-spacing: -0.03em; line-height: 0.95; margin: 0 0 24px; }
+.hero h1 em { font-style: italic; color: var(--red); }
+.hero p { font-family: 'Fraunces', serif; font-style: italic; font-size: 28px; max-width: 720px; line-height: 1.3; color: var(--cobalt); }
+
+.meta-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 28px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 64px; }
+.meta-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; opacity: 0.55; margin-bottom: 6px; font-weight: 500; }
+.meta-value { font-size: 15px; font-weight: 500; }
+
+.intro { padding: 0 0 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.intro h2 { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 16px; }
+.intro h2 em { font-style: italic; color: var(--red); }
+.intro p { font-size: 17px; line-height: 1.7; opacity: 0.85; }
+.intro p + p { margin-top: 14px; }
+
+.section-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.16em; opacity: 0.6; font-weight: 500; margin-bottom: 32px; }
+
+.deliverables { padding: 64px 0; border-top: 1px solid var(--line); }
+.dlv-block { margin-bottom: 56px; }
+.dlv-block:last-child { margin-bottom: 0; }
+.dlv-head { display: grid; grid-template-columns: 1fr 1.6fr; gap: 32px; margin-bottom: 24px; align-items: baseline; }
+.dlv-name { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 500; letter-spacing: -0.02em; line-height: 1; }
+.dlv-name em { font-style: italic; color: var(--red); }
+.dlv-num { font-family: 'Fraunces', serif; font-style: italic; font-size: 17px; opacity: 0.55; margin-bottom: 6px; display: block; }
+.dlv-desc { font-size: 15px; line-height: 1.7; opacity: 0.8; }
+
+.fra { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.025em; line-height: 0.95; }
+.fra em { font-style: italic; }
+.foot-tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 500; opacity: 0.7; }
+
+/* Wordmark block */
+.wordmark-block { background: var(--cream); border-radius: 16px; padding: 80px 60px; display: flex; align-items: center; justify-content: center; min-height: 260px; }
+.wordmark-display { font-family: 'Fraunces', serif; font-size: 128px; font-weight: 500; letter-spacing: -0.03em; line-height: 1; color: var(--ink); }
+.wordmark-display em { font-style: italic; color: var(--red); }
+
+/* Poster block */
+.poster-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: center; }
+.poster { background: var(--red); color: var(--cream); border-radius: 12px; padding: 48px 40px; aspect-ratio: 17 / 22; display: flex; flex-direction: column; justify-content: space-between; }
+.poster-headline { font-family: 'Fraunces', serif; font-size: 88px; font-weight: 500; letter-spacing: -0.04em; line-height: 0.88; }
+.poster-headline em { font-style: italic; color: var(--yellow); }
+.poster-mark { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 500; letter-spacing: -0.02em; }
+.poster-mark em { font-style: italic; color: var(--yellow); }
+.poster-side-note { padding: 24px; font-size: 14px; line-height: 1.7; opacity: 0.8; }
+.poster-side-note p + p { margin-top: 10px; }
+
+/* Postcard block */
+.postcard-stack { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.postcard { border-radius: 12px; padding: 32px 28px; aspect-ratio: 6 / 4; display: flex; flex-direction: column; justify-content: space-between; }
+.postcard-front { background: var(--cobalt); color: var(--cream); }
+.postcard-back { background: var(--cream); color: var(--ink); border: 0.5px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.postcard-back-left { border-right: 1px dashed rgba(26,26,26,0.25); padding-right: 14px; display: flex; flex-direction: column; justify-content: space-between; }
+.stamp-box { width: 50px; height: 50px; border: 1px solid rgba(26,26,26,0.4); align-self: flex-end; display: flex; align-items: center; justify-content: center; font-size: 9px; text-transform: uppercase; letter-spacing: 0.14em; opacity: 0.5; font-weight: 500; }
+.addr-lines { display: flex; flex-direction: column; gap: 10px; }
+.addr-line { height: 1px; background: rgba(26,26,26,0.3); }
+
+/* IG tiles */
+.tiles { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.tile { aspect-ratio: 1; border-radius: 12px; padding: 28px 26px; display: flex; flex-direction: column; justify-content: space-between; }
+.tile-1 { background: var(--yellow); color: var(--ink); }
+.tile-2 { background: var(--pink); color: var(--ink); }
+.tile-3 { background: var(--cobalt); color: var(--cream); }
+.tile-list { font-family: 'Fraunces', serif; font-size: 20px; line-height: 1.3; font-weight: 500; }
+.tile-list-num { display: inline-block; width: 22px; opacity: 0.6; font-style: italic; font-size: 16px; }
+
+/* Quiz block */
+.quiz-section { padding: 80px 0; border-top: 1px solid var(--line); }
+.quiz-card { background: var(--cobalt); color: var(--cream); border-radius: 16px; padding: 2.5rem 2.75rem; }
+.quiz-q { font-family: 'Fraunces', serif; font-size: 44px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.05; margin: 0 0 1.5rem; }
+.quiz-q em { font-style: italic; color: var(--yellow); }
+.quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 1.5rem; }
+.opt { background: transparent; color: var(--cream); border: 1px solid rgba(250,244,230,0.4); padding: 18px 22px; border-radius: 999px; font-size: 15px; cursor: pointer; font-family: 'Inter', sans-serif; text-align: center; font-weight: 400; transition: background 0.15s ease, color 0.15s ease; }
+.opt:hover { background: rgba(250,244,230,0.1); }
+.opt.selected { background: var(--yellow); color: var(--ink); border-color: var(--yellow); font-weight: 500; }
+.quiz-foot { display: flex; justify-content: space-between; align-items: center; padding-top: 1.25rem; border-top: 1px solid rgba(250,244,230,0.25); font-size: 13px; opacity: 0.85; }
+.result { background: var(--yellow); color: var(--ink); border-radius: 16px; padding: 2rem 2.5rem; margin-top: 1rem; display: none; }
+.result.show { display: block; }
+.result-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; opacity: 0.6; margin: 0 0 0.75rem; font-weight: 500; }
+.result-text { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 1.5rem; }
+.result-text em { font-style: italic; color: var(--red); }
+.restart-btn { background: var(--ink); color: var(--cream); padding: 14px 28px; border-radius: 999px; font-size: 14px; font-weight: 500; border: none; cursor: pointer; font-family: 'Inter', sans-serif; }
+
+.closing { padding: 80px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.closing h3 { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 16px; }
+.closing h3 em { font-style: italic; color: var(--red); }
+.closing p { font-size: 16px; line-height: 1.7; opacity: 0.85; }
+
+footer { padding: 24px 0 48px; border-top: 1px solid var(--line); margin-top: 32px; font-size: 13px; display: flex; justify-content: space-between; }
+footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+
+@media (max-width: 900px) {
+  .hero h1 { font-size: 64px; }
+  .hero p { font-size: 22px; }
+  .meta-bar { grid-template-columns: 1fr 1fr; }
+  .intro { grid-template-columns: 1fr; gap: 16px; }
+  .wordmark-display { font-size: 72px; }
+  .poster-wrap { grid-template-columns: 1fr; }
+  .poster-headline { font-size: 56px; }
+  .postcard-stack { grid-template-columns: 1fr; }
+  .tiles { grid-template-columns: 1fr; }
+  .quiz-q { font-size: 32px; }
+  .quiz-options { grid-template-columns: 1fr; }
+  .closing { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<nav class="nav">
+  <span class="nav-mark">Nora Vertus — Studio</span>
+  <a href="index.html" class="nav-back">← All work</a>
+</nav>
+
+<section class="hero">
+  <p class="hero-eyebrow">Case study · 01</p>
+  <h1>Repair <em>Club</em>.</h1>
+  <p>A fictional community repair café where membership is free — the only rule is showing up with something broken.</p>
+</section>
+
+<div class="meta-bar">
+  <div><p class="meta-label">Year</p><p class="meta-value">2026</p></div>
+  <div><p class="meta-label">Role</p><p class="meta-value">Direction · Design · Copy</p></div>
+  <div><p class="meta-label">Scope</p><p class="meta-value">Identity · print · web · interactive</p></div>
+  <div><p class="meta-label">Tools</p><p class="meta-value">Affinity · Krea · HTML/JS</p></div>
+</div>
+
+<section class="intro">
+  <div>
+    <h2>The <em>brand</em></h2>
+    <p>The name does the work. "Club" reframes repair as something you <em>join</em>, not something you do alone. The conspiratorial wink is built into the premise — you're in on this, with everyone else who's in on it. Membership is free. The only requirement is showing up with something broken.</p>
+    <p>Tagline: <em>The only club where everyone wins.</em></p>
+  </div>
+  <div>
+    <h2>The <em>angle</em></h2>
+    <p>I'm interested in the things people pass on — and the work it takes to make them feel chosen. Repair sits between <em>I'm too cheap to replace this</em> and <em>this is mine and I'd like to keep it</em>. The design world I built leans into the second meaning, hard.</p>
+    <p>A confident chromatic four — cobalt, red-orange, mustard, lavender pink — held by a calm cream and charcoal. No color is the brand color; the system flexes piece by piece, the way a real club's materials would.</p>
+  </div>
+</section>
+
+<section class="deliverables">
+  <p class="section-label">The pieces — six deliverables in one visual language</p>
+
+  <div class="dlv-block">
+    <div class="dlv-head">
+      <div>
+        <span class="dlv-num">01</span>
+        <h3 class="dlv-name">Wordmark</h3>
+      </div>
+      <p class="dlv-desc">Display: Recoleta Medium. Italic on "Club" carries the wink — red-orange on light grounds, mustard on dark. Body throughout the brand: Inter, regular and medium only.</p>
+    </div>
+    <div class="wordmark-block">
+      <span class="wordmark-display">Repair <em>Club</em>.</span>
+    </div>
+  </div>
+
+  <div class="dlv-block">
+    <div class="dlv-head">
+      <div>
+        <span class="dlv-num">02</span>
+        <h3 class="dlv-name">Event <em>poster</em></h3>
+      </div>
+      <p class="dlv-desc">Letter-size · red-orange ground. The headline does the work. No imagery — type carries the brief on its own.</p>
+    </div>
+    <div class="poster-wrap">
+      <div class="poster">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <span class="poster-mark">Repair <em>Club</em></span>
+          <span class="foot-tag" style="opacity:0.85;">Repair fair 002</span>
+        </div>
+        <h4 class="poster-headline">Bring<br>something<br><em>broken.</em></h4>
+        <span class="foot-tag" style="opacity:0.85;">Sat 18 May · 10–2 · 1429 Cooper St · Free entry</span>
+      </div>
+      <div class="poster-side-note">
+        <p>One headline. One call. The poster doesn't sell — it invites.</p>
+        <p>The tagline "<em>The only club where everyone wins.</em>" appears on every variant, reinforced as the brand line across the campaign.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlv-block">
+    <div class="dlv-head">
+      <div>
+        <span class="dlv-num">03</span>
+        <h3 class="dlv-name">Membership <em>postcard</em></h3>
+      </div>
+      <p class="dlv-desc">Cobalt front, cream back. Headline rephrased for the format: <em>Membership: bring something broken.</em> Back keeps a real address block — designed to actually mail.</p>
+    </div>
+    <div class="postcard-stack">
+      <div class="postcard postcard-front">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <span class="poster-mark">Repair <em>Club</em></span>
+          <span class="foot-tag" style="opacity:0.7;">Postcard No. 04</span>
+        </div>
+        <h4 class="fra" style="font-size: 44px;">Membership:<br>bring something<br><em style="color:var(--yellow);">broken.</em></h4>
+        <span style="font-family: 'Fraunces', serif; font-style: italic; font-size: 17px;">You're invited.</span>
+      </div>
+      <div class="postcard postcard-back">
+        <div class="postcard-back-left">
+          <div class="stamp-box">Stamp</div>
+          <div class="addr-lines">
+            <div class="addr-line"></div>
+            <div class="addr-line"></div>
+            <div class="addr-line"></div>
+            <div class="addr-line"></div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <h4 class="fra" style="font-size: 26px;">Bring it back to <em style="color:var(--red);">life.</em></h4>
+          <p style="font-size: 12px; line-height: 1.65; opacity: 0.85;">Show up Saturday. Bring your broken thing. We'll figure it out together. <strong>Membership: free.</strong></p>
+          <div class="foot-tag" style="font-size: 10px; padding-top: 8px; border-top: 0.5px solid rgba(26,26,26,0.18);">repairclub.co</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlv-block">
+    <div class="dlv-head">
+      <div>
+        <span class="dlv-num">04</span>
+        <h3 class="dlv-name">Instagram <em>series</em></h3>
+      </div>
+      <p class="dlv-desc">Three-piece triptych for the in-feed read — event announcement (yellow), this-week's-haul list (pink), manifesto pull (cobalt). One voice across three tiles.</p>
+    </div>
+    <div class="tiles">
+      <div class="tile tile-1">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <span class="poster-mark">Repair <em style="color:var(--red);">Club</em></span>
+          <span class="foot-tag" style="opacity:0.55;">No. 18</span>
+        </div>
+        <h4 class="fra" style="font-size: 34px;">This<br>Saturday.<br><em style="color:var(--red);">10–2.</em></h4>
+        <span class="foot-tag" style="opacity:0.65;">1429 Cooper St</span>
+      </div>
+      <div class="tile tile-2">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <span class="poster-mark">Repair <em style="color:var(--red);">Club</em></span>
+          <span class="foot-tag" style="opacity:0.55;">No. 19</span>
+        </div>
+        <div>
+          <p class="foot-tag" style="opacity:0.6; margin-bottom: 8px;">This week's haul</p>
+          <div class="tile-list">
+            <div><span class="tile-list-num">01</span>3 lamps</div>
+            <div><span class="tile-list-num">02</span>2 jackets</div>
+            <div><span class="tile-list-num">03</span>1 toaster</div>
+            <div><span class="tile-list-num">04</span>1 ceramic cat</div>
+          </div>
+        </div>
+        <span class="fra" style="font-size: 22px;"><em style="color:var(--red);">All saved.</em></span>
+      </div>
+      <div class="tile tile-3">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <span class="poster-mark">Repair <em style="color:var(--yellow);">Club</em></span>
+          <span class="foot-tag" style="opacity:0.55;">No. 20</span>
+        </div>
+        <h4 class="fra" style="font-size: 26px;">Stop<br>throwing<br>things<br><em style="color:var(--yellow);">away.</em></h4>
+        <span class="foot-tag" style="opacity:0.65;">Start a Repair Club.</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="quiz-section">
+  <p class="section-label">05 · Interactive — try it</p>
+  <div class="dlv-head" style="margin-bottom: 24px;">
+    <div>
+      <h3 class="dlv-name">Repair <em>Diagnostics</em></h3>
+    </div>
+    <p class="dlv-desc">Two questions. A diagnosis. A call to action. The "this democracy / this relationship" options are deliberate — they reward the audience already in on the joke without alienating the literal user who really does have a lamp.</p>
+  </div>
+  <div class="quiz-card" id="rc-quiz">
+    <h4 class="quiz-q" id="rc-q-text">What's <em>broken?</em></h4>
+    <div class="quiz-options" id="rc-q-opts"></div>
+    <div class="quiz-foot">
+      <span id="rc-q-step">Question 1 of 2</span>
+      <span style="opacity: 0.6;">Takes about 9 seconds.</span>
+    </div>
+  </div>
+  <div class="result" id="rc-result">
+    <p class="result-label">Your diagnosis</p>
+    <p class="result-text" id="rc-result-text"></p>
+    <button class="restart-btn" id="rc-restart">Run it again ↺</button>
+  </div>
+</section>
+
+<section class="closing">
+  <div>
+    <h3>Why <em>this project.</em></h3>
+    <p>I built Repair Club as a parallel project to a campaign I'm applying to design for an actual nonprofit. The applied work uses my real ideas; this one tests the system at the same scope without burning anything for the application.</p>
+    <p>The point of the exercise: show that I can hold a visual world across formats, not just make one good piece.</p>
+  </div>
+  <div>
+    <h3>What I'd <em>build next.</em></h3>
+    <p>A short-run printed booklet — a member zine or repair primer with tips and stories. Member cards. Workshop signage system. If the brand ran for a year, the system can hold it.</p>
+    <p>If you have a project in this kind of territory, <a href="mailto:noravertus@outlook.com" style="color: var(--red); text-decoration: none; border-bottom: 1px solid var(--red); padding-bottom: 2px;">say hi.</a></p>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html">← Back to all work</a>
+  <span style="opacity: 0.55;">© 2026 Nora Vertus</span>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var questions = [
+    { text: "What's <em>broken?</em>", options: ["This jacket", "This lamp", "This relationship", "This democracy"], key: "subject" },
+    { text: "How <em>attached</em> are you?", options: ["Couldn't bear to lose it", "Pretty attached", "On the fence", "Honestly, not much"], key: "attachment" }
+  ];
+  var answers = { subject: null, attachment: null };
+  var current = 0;
+  var diagnoses = {
+    "This jacket|Couldn't bear to lose it": "Sentimental textile. <em>Bring it Saturday.</em> We'll patch it with care.",
+    "This jacket|Pretty attached": "Wearable nostalgia, worth saving. <em>Patch night is your night.</em>",
+    "This jacket|On the fence": "Toss-up. <em>Bring it.</em> Decide after coffee.",
+    "This jacket|Honestly, not much": "Then it's free real estate. <em>Bring it</em> — someone else will love it back to life.",
+    "This lamp|Couldn't bear to lose it": "Heirloom electricals. We've seen worse. <em>Bring it.</em>",
+    "This lamp|Pretty attached": "Solid candidate. <em>Soldering iron, here we come.</em>",
+    "This lamp|On the fence": "Even on-the-fence lamps deserve a second look. <em>Bring it.</em>",
+    "This lamp|Honestly, not much": "Lamps are easy. <em>Bring it</em> — leave it lit.",
+    "This relationship|Couldn't bear to lose it": "We can't fix this one. <em>But coffee's still on us.</em> Come anyway.",
+    "This relationship|Pretty attached": "Outside our jurisdiction. <em>But the soldering iron is a good listener.</em>",
+    "This relationship|On the fence": "That's a self-fix. <em>Bring something we can actually mend.</em>",
+    "This relationship|Honestly, not much": "Then leave it. <em>Bring something with potential.</em>",
+    "This democracy|Couldn't bear to lose it": "Out of our depth. <em>But start small — bring something else.</em>",
+    "This democracy|Pretty attached": "Same here. <em>Mending one thing at a time helps. Bring something.</em>",
+    "This democracy|On the fence": "We can't fix this one. <em>But come anyway. Mending is contagious.</em>",
+    "This democracy|Honestly, not much": "Fair. <em>Bring a lamp.</em> Start there."
+  };
+  function render(){
+    var q = questions[current];
+    document.getElementById('rc-q-text').innerHTML = q.text;
+    document.getElementById('rc-q-step').textContent = 'Question ' + (current + 1) + ' of 2';
+    var opts = document.getElementById('rc-q-opts');
+    opts.innerHTML = '';
+    q.options.forEach(function(opt){
+      var btn = document.createElement('button');
+      btn.className = 'opt';
+      btn.textContent = opt;
+      btn.addEventListener('click', function(){
+        answers[q.key] = opt;
+        Array.prototype.forEach.call(opts.children, function(c){ c.classList.remove('selected'); });
+        btn.classList.add('selected');
+        setTimeout(advance, 240);
+      });
+      opts.appendChild(btn);
+    });
+  }
+  function advance(){
+    if (current < questions.length - 1) { current++; render(); } else { showResult(); }
+  }
+  function showResult(){
+    var key = answers.subject + '|' + answers.attachment;
+    var diag = diagnoses[key] || "Bring it Saturday. We'll figure it out together.";
+    document.getElementById('rc-quiz').style.display = 'none';
+    document.getElementById('rc-result').classList.add('show');
+    document.getElementById('rc-result-text').innerHTML = diag;
+  }
+  document.getElementById('rc-restart').addEventListener('click', function(){
+    answers = { subject: null, attachment: null };
+    current = 0;
+    document.getElementById('rc-quiz').style.display = 'block';
+    document.getElementById('rc-result').classList.remove('show');
+    render();
+  });
+  render();
+})();
+</script>
+
+</body>
+</html>
