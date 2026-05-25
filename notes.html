@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes toward a campaign — Nora Vertus</title>
+<meta name="description" content="Early thinking on the 2026 Reuse Awareness Campaign for Reuse Alliance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #EDE5D2;
+  --paper: #FAF4E6;
+  --ink: #1A1A1A;
+  --muted: rgba(26,26,26,0.65);
+  --line: rgba(26,26,26,0.18);
+  --sage: #5C8A6C;
+  --marigold: #E5A93D;
+  --coral: #D9624A;
+  --cream: #FAF4E6;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+.page { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+
+.nav { display: flex; justify-content: space-between; align-items: baseline; padding: 28px 0 20px; border-bottom: 1px solid var(--line); font-size: 14px; position: sticky; top: 0; background: var(--bg); z-index: 10; }
+.nav-mark { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 500; letter-spacing: -0.01em; }
+.nav-back { color: var(--ink); text-decoration: none; opacity: 0.75; }
+.nav-back:hover { opacity: 1; }
+
+.hero { padding: 80px 0 48px; }
+.hero-eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em; opacity: 0.55; font-weight: 500; margin-bottom: 20px; }
+.hero h1 { font-family: 'Fraunces', serif; font-size: 76px; font-weight: 500; letter-spacing: -0.025em; line-height: 1; margin: 0 0 24px; max-width: 920px; }
+.hero h1 em { font-style: italic; color: var(--coral); }
+.hero-sub { font-family: 'Fraunces', serif; font-style: italic; font-size: 22px; opacity: 0.75; max-width: 660px; line-height: 1.4; color: var(--ink); }
+
+.framing { padding: 24px 0 56px; max-width: 720px; }
+.framing p { font-size: 16px; line-height: 1.75; opacity: 0.85; }
+.framing p + p { margin-top: 12px; }
+.framing em { font-style: italic; }
+
+.tiles { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 56px; }
+.tile { aspect-ratio: 1; border-radius: 12px; padding: 32px 30px; display: flex; flex-direction: column; justify-content: space-between; font-family: 'Inter', sans-serif; }
+.tile-1 { background: var(--sage); color: var(--cream); }
+.tile-2 { background: var(--cream); color: var(--ink); border: 0.5px solid var(--line); }
+.tile-3 { background: var(--marigold); color: var(--ink); }
+.tile-num { font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 500; opacity: 0.75; }
+.tile-headline { font-family: 'Fraunces', serif; font-weight: 500; letter-spacing: -0.025em; line-height: 0.98; }
+.tile-headline em { font-style: italic; }
+.tile-foot { font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 500; opacity: 0.7; }
+
+.notes { padding: 48px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+.note h3 { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 500; letter-spacing: -0.01em; margin: 0 0 10px; }
+.note h3 em { font-style: italic; color: var(--coral); }
+.note-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; opacity: 0.55; font-weight: 500; margin-bottom: 12px; }
+.note p { font-size: 14px; line-height: 1.65; opacity: 0.85; }
+
+.closing { padding: 64px 0; }
+.closing h2 { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.15; margin: 0 0 16px; max-width: 720px; }
+.closing h2 em { font-style: italic; color: var(--coral); }
+.closing p { font-size: 16px; line-height: 1.75; opacity: 0.85; max-width: 660px; }
+.closing p + p { margin-top: 12px; }
+.closing em { font-style: italic; }
+.closing a { color: var(--coral); text-decoration: none; border-bottom: 1px solid var(--coral); padding-bottom: 2px; }
+
+footer { padding: 24px 0 48px; border-top: 1px solid var(--line); margin-top: 32px; font-size: 13px; display: flex; justify-content: space-between; }
+footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+
+@media (max-width: 900px) {
+  .hero h1 { font-size: 48px; }
+  .hero-sub { font-size: 18px; }
+  .tiles { grid-template-columns: 1fr; }
+  .notes { grid-template-columns: 1fr; gap: 20px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<nav class="nav">
+  <span class="nav-mark">Nora Vertus — Studio</span>
+  <a href="index.html" class="nav-back">← All work</a>
+</nav>
+
+<section class="hero">
+  <p class="hero-eyebrow">Notes · toward a campaign</p>
+  <h1>Three early <em>thoughts</em> on the 2026 Reuse Awareness Campaign.</h1>
+  <p class="hero-sub">Not a pitch. Not the campaign. Just the first sketches — voice and direction before deliverables.</p>
+</section>
+
+<div class="framing">
+  <p>If I were starting tomorrow, here's the shape of the conversation I'd want to have. Each tile below picks at one facet of the social benefits the brief calls out — community, connection, intention — and tests a voice for it. The tone is consistent across, the angles are deliberately different. Three doors into the same room.</p>
+</div>
+
+<div class="tiles">
+
+  <div class="tile tile-1">
+    <span class="tile-num">Thought · 01</span>
+    <h2 class="tile-headline" style="font-size: 32px;">Reuse is the only <em style="color: var(--marigold);">flex</em> where everyone <em style="color: var(--marigold);">wins.</em></h2>
+    <span class="tile-foot">On community · resilience</span>
+  </div>
+
+  <div class="tile tile-2">
+    <span class="tile-num">Thought · 02</span>
+    <h2 class="tile-headline" style="font-size: 32px;">Trading tips is a <em style="color: var(--coral);">love language.</em></h2>
+    <span class="tile-foot">On connection · less loneliness</span>
+  </div>
+
+  <div class="tile tile-3">
+    <span class="tile-num">Thought · 03</span>
+    <h2 class="tile-headline" style="font-size: 32px;">Setting the trend, <em style="color: var(--coral);">not following it.</em></h2>
+    <span class="tile-foot">On intention · empowerment</span>
+  </div>
+
+</div>
+
+<section class="notes">
+  <div class="note">
+    <p class="note-label">01 · The fix</p>
+    <h3>From <em>sacrifice</em> to flex.</h3>
+    <p>Reframe reuse as a thing you're good at, not a thing you settle for. Communities of people who reuse already exist — they trade tips, share sources, fix each other's lamps. The campaign invites the audience into a club they didn't realize was meeting.</p>
+  </div>
+  <div class="note">
+    <p class="note-label">02 · The fix</p>
+    <h3>From <em>solo</em> to social.</h3>
+    <p>The cure for loneliness isn't an app. It's knowing where the good thrift bins are and who to text when you find something for them. Reuse gives people a reason to know each other.</p>
+  </div>
+  <div class="note">
+    <p class="note-label">03 · The fix</p>
+    <h3>From <em>trend</em> to taste.</h3>
+    <p>Intentional is the actual flex now. The campaign positions reuse as the move of people who think for themselves — not nostalgia for the past, but agency in the present.</p>
+  </div>
+</section>
+
+<section class="closing">
+  <h2>If we work together, none of this is the campaign — it's the <em>warm-up.</em></h2>
+  <p>The actual creative would come out of the kickoff conversation and the audience you have in mind for 2026. These sketches are here so you can see how I'd start: what I'd argue for, what I'd push back on, what kind of voice I'd want to set.</p>
+  <p>The full thinking is in my <a href="repair-club.html">Repair Club case study</a> — the brand world that's closest to the energy I'd bring here.</p>
+</section>
+
+<footer>
+  <a href="index.html">← Back to all work</a>
+  <span style="opacity: 0.55;">© 2026 Nora Vertus</span>
+</footer>
+
+</div>
+</body>
+</html>
