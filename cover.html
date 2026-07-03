@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LEGASI cover</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #555; }
+.cover {
+  position: fixed; top: 0; left: 0;
+  width: 1200px; height: 630px;
+  background: #1A1A1A;
+  color: #FAF4E6;
+  font-family: 'Inter', sans-serif;
+  padding: 56px 64px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  overflow: hidden;
+}
+.head { display: flex; justify-content: space-between; align-items: flex-start; }
+.masthead { font-family: 'Fraunces', serif; font-size: 40px; font-weight: 500; letter-spacing: -0.02em; }
+.masthead em { font-style: italic; color: #F5C544; }
+.issue { font-size: 15px; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 500; opacity: 0.7; text-align: right; line-height: 1.7; }
+.title { font-family: 'Fraunces', serif; font-size: 104px; font-weight: 500; letter-spacing: -0.03em; line-height: 0.98; }
+.title em { font-style: italic; color: #F5C544; }
+.foot { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid rgba(250,244,230,0.3); padding-top: 26px; }
+.foot-left { font-family: 'Fraunces', serif; font-style: italic; font-size: 24px; color: #F3B8C9; }
+.foot-right { font-size: 15px; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 500; opacity: 0.7; }
+.rule-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #FF5238; margin-right: 14px; }
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="head">
+    <span class="masthead">Maison <em>LEGASI.</em></span>
+    <span class="issue">Nora Vertus<br>Culture · Memory · Social Impact</span>
+  </div>
+  <h1 class="title"><span class="rule-dot"></span>An archive of<br>Haitian <em>dignity.</em></h1>
+  <div class="foot">
+    <span class="foot-left">Womanhood · labor · beauty · the everyday.</span>
+    <span class="foot-right">legasi · est. 2026</span>
+  </div>
+</div>
+</body>
+</html>
