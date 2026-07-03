@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nora Vertus — LEGASI Magazine</title>
+<meta name="description" content="Nora Vertus — PR & Communications Strategist and founder of LEGASI Magazine, an archive of Haitian dignity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #EDE5D2;
+  --surface: #FAF4E6;
+  --ink: #1A1A1A;
+  --muted: rgba(26,26,26,0.6);
+  --line: rgba(26,26,26,0.18);
+  --red: #FF5238;
+  --cobalt: #1B4FDB;
+  --yellow: #F5C544;
+  --pink: #F3B8C9;
+  --cream: #FAF4E6;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+.page { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+.nav { display: flex; justify-content: space-between; align-items: baseline; padding: 28px 0 20px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.nav-mark { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 500; letter-spacing: -0.01em; }
+.nav a { color: var(--ink); text-decoration: none; opacity: 0.75; }
+.nav a:hover { opacity: 1; }
+
+.hero { padding: 56px 0 40px; }
+.hero-kicker { font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; opacity: 0.55; font-weight: 500; margin-bottom: 24px; }
+.hero h1 { font-family: 'Fraunces', serif; font-size: 48px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.02; margin: 0 0 20px; }
+.hero h1 em { font-style: italic; color: var(--red); }
+.hero p { font-size: 17px; opacity: 0.78; line-height: 1.55; max-width: 580px; }
+.hero p + p { margin-top: 12px; }
+.hero .legasi-line { font-family: 'Fraunces', serif; font-style: italic; font-size: 19px; color: var(--cobalt); opacity: 1; }
+
+.section { padding: 40px 0; border-top: 1px solid var(--line); }
+.section-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.16em; opacity: 0.6; font-weight: 500; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: baseline; }
+.section-label span:last-child { font-family: 'Fraunces', serif; font-style: italic; font-size: 14px; text-transform: none; letter-spacing: 0; }
+
+.legasi-card { background: var(--ink); color: var(--cream); border-radius: 14px; padding: 40px 36px; }
+.legasi-card h2 { font-family: 'Fraunces', serif; font-size: 40px; font-weight: 500; letter-spacing: -0.025em; line-height: 1; margin: 0 0 14px; }
+.legasi-card h2 em { font-style: italic; color: var(--yellow); }
+.legasi-card > p { font-size: 15px; opacity: 0.8; max-width: 480px; line-height: 1.55; margin-bottom: 28px; }
+.legasi-links { display: flex; flex-direction: column; }
+.legasi-row { display: flex; justify-content: space-between; align-items: baseline; padding: 16px 4px; border-top: 0.5px solid rgba(250,244,230,0.25); text-decoration: none; color: var(--cream); transition: padding 0.15s ease; }
+.legasi-row:hover { padding-left: 12px; }
+.legasi-row:last-child { border-bottom: 0.5px solid rgba(250,244,230,0.25); }
+.legasi-name { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 500; letter-spacing: -0.02em; }
+.legasi-name em { font-style: italic; color: var(--yellow); }
+.legasi-arrow { font-size: 14px; opacity: 0.6; }
+
+.link-list { display: flex; flex-direction: column; }
+.link-row { display: flex; justify-content: space-between; align-items: baseline; padding: 18px 4px; border-bottom: 0.5px solid var(--line); text-decoration: none; color: var(--ink); transition: padding 0.15s ease; }
+.link-row:first-child { border-top: 0.5px solid var(--line); }
+.link-row:hover { padding-left: 12px; }
+.link-name { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 500; letter-spacing: -0.02em; }
+.link-name em { font-style: italic; color: var(--red); }
+.link-tag { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.55; font-weight: 500; }
+
+.book-card { background: var(--cobalt); color: var(--cream); border-radius: 14px; padding: 40px 36px; display: flex; flex-direction: column; gap: 20px; }
+.book-card h2 { font-family: 'Fraunces', serif; font-size: 38px; font-weight: 500; letter-spacing: -0.025em; line-height: 1; margin: 0; }
+.book-card h2 em { font-style: italic; color: var(--yellow); }
+.book-card p { font-size: 15px; opacity: 0.85; max-width: 460px; line-height: 1.55; }
+.book-btn { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: var(--yellow); color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; padding: 12px 22px; border-radius: 999px; }
+.book-btn:hover { opacity: 0.9; }
+.book-meta { font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 500; opacity: 0.7; }
+
+.guides-intro { font-size: 15px; opacity: 0.75; line-height: 1.6; max-width: 560px; margin-bottom: 24px; }
+.guides-intro em { font-family: 'Fraunces', serif; font-style: italic; }
+
+.shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.shop-card { border-radius: 14px; padding: 32px 28px; display: flex; flex-direction: column; gap: 14px; min-height: 340px; }
+.shop-yellow { background: var(--yellow); color: var(--ink); }
+.shop-pink { background: var(--pink); color: var(--ink); }
+.shop-kicker { font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 500; opacity: 0.6; }
+.shop-card h3 { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.05; margin: 0; }
+.shop-card h3 em { font-style: italic; color: var(--red); }
+.shop-card p { font-size: 14px; opacity: 0.8; line-height: 1.55; }
+.shop-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; }
+.shop-price { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 500; }
+.shop-btn { background: var(--ink); color: var(--cream); text-decoration: none; font-size: 13px; font-weight: 500; padding: 10px 20px; border-radius: 999px; }
+.shop-btn:hover { opacity: 0.85; }
+
+.studio-note { background: var(--surface); border: 0.5px solid var(--line); border-radius: 14px; padding: 32px 28px; }
+.studio-note p { font-size: 15px; opacity: 0.85; line-height: 1.6; }
+.studio-note a { color: var(--ink); font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
+
+footer { padding: 24px 0 48px; border-top: 1px solid var(--line); margin-top: 40px; font-size: 12px; opacity: 0.5; display: flex; justify-content: space-between; }
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 36px; }
+  .shop-grid { grid-template-columns: 1fr; }
+  .book-card, .legasi-card { padding: 32px 26px; }
+  .book-card h2 { font-size: 30px; }
+  .legasi-card h2 { font-size: 32px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<nav class="nav">
+  <span class="nav-mark">Nora Vertus</span>
+  <a href="index.html">← All work</a>
+</nav>
+
+<section class="hero">
+  <p class="hero-kicker">Culture · Memory · Social Impact</p>
+  <h1>Nora Vertus<br>Founder of <em>LEGASI Magazine.</em></h1>
+  <p>PR & Communications Strategist building narrative spaces for culture, memory, and social impact.</p>
+  <p class="legasi-line">LEGASI Magazine is an archive of Haitian dignity — preserving stories of womanhood, labor, beauty, and everyday life through editorial storytelling.</p>
+</section>
+
+<section class="section">
+  <p class="section-label"><span>The magazine</span><span>Coming soon</span></p>
+  <div class="legasi-card">
+    <h2>LEGASI <em>Magazine.</em></h2>
+    <p>An archive of Haitian dignity — womanhood, labor, beauty, memory, and the everyday, kept with care.</p>
+    <p style="font-family: 'Fraunces', serif; font-style: italic; font-size: 22px; color: var(--yellow); margin-bottom: 8px;">The first issue is being gathered with care.</p>
+    <p style="margin-bottom: 0;">Follow the archive as it takes shape at <a href="https://www.instagram.com/itsnoravertus" target="_blank" rel="noopener" style="color: var(--yellow); text-decoration: none; border-bottom: 1px solid var(--yellow); padding-bottom: 2px;">@itsnoravertus</a>.</p>
+  </div>
+</section>
+
+<section class="section">
+  <p class="section-label"><span>Strategy & storytelling</span><span>Consulting</span></p>
+  <div class="book-card">
+    <span class="book-meta">1:1 · 30 minutes · Calendly</span>
+    <h2>Storytelling <em>session.</em></h2>
+    <p>A focused strategy session for founders, artists, and purpose-driven brands who need clearer positioning, stronger storytelling, and a public presence rooted in substance.</p>
+    <a class="book-btn" href="https://calendly.com/noravertus/30min" target="_blank" rel="noopener">Book a session →</a>
+  </div>
+</section>
+
+<section class="section">
+  <p class="section-label"><span>Follow the work</span><span>Socials</span></p>
+  <div class="link-list">
+    <a class="link-row" href="https://www.instagram.com/itsnoravertus" target="_blank" rel="noopener">
+      <span class="link-name">Insta<em>gram</em></span>
+      <span class="link-tag">@itsnoravertus</span>
+    </a>
+    <a class="link-row" href="https://www.linkedin.com/in/nora-vertus" target="_blank" rel="noopener">
+      <span class="link-name">Linked<em>In</em></span>
+      <span class="link-tag">nora-vertus</span>
+    </a>
+    <a class="link-row" href="https://www.youtube.com/@itsnoravertus" target="_blank" rel="noopener">
+      <span class="link-name">You<em>Tube</em></span>
+      <span class="link-tag">@itsnoravertus</span>
+    </a>
+    <a class="link-row" href="https://www.tiktok.com/@itsnoravertus" target="_blank" rel="noopener">
+      <span class="link-name">Tik<em>Tok</em></span>
+      <span class="link-tag">@itsnoravertus</span>
+    </a>
+  </div>
+</section>
+
+<section class="section">
+  <p class="section-label"><span>Resources</span><span>Guides</span></p>
+  <p class="guides-intro">Practical resources on <em>dignity, money, labor, and self-definition</em> — created for people building lives with clarity, care, and agency.</p>
+  <div class="shop-grid">
+
+    <div class="shop-card shop-yellow">
+      <span class="shop-kicker">Guide · No. 01</span>
+      <h3>The Vertus <em>Method.</em></h3>
+      <p>A calm, intentional path to financial freedom — no hustle, just smart money moves. Transform your finances, minus the burnout.</p>
+      <div class="shop-foot">
+        <span class="shop-price">$29.99</span>
+        <!-- Replace href with your direct checkout link if you have one -->
+        <a class="shop-btn" href="https://bio.site/Itsnoravertus" target="_blank" rel="noopener">Buy →</a>
+      </div>
+    </div>
+
+    <div class="shop-card shop-pink">
+      <span class="shop-kicker">Guide · No. 02</span>
+      <h3>Pay me <em>properly.</em></h3>
+      <p>A nurse's guide to wage clarity, negotiation, and dignity. Know your worth, negotiate with clarity, and stop leaving money on the table.</p>
+      <div class="shop-foot">
+        <span class="shop-price">$10.99</span>
+        <!-- Replace href with your direct checkout link if you have one -->
+        <a class="shop-btn" href="https://bio.site/Itsnoravertus" target="_blank" rel="noopener">Buy →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <p class="section-label"><span>LEGASI / Studio</span><span>Design work</span></p>
+  <div class="studio-note">
+    <p>I also design — identity, campaigns, and editorial. See <a href="index.html">the studio</a>, or go straight to <a href="repair-club.html">Repair Club</a>. Got a project? <a href="mailto:noravertus@outlook.com">Say hi.</a></p>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Nora Vertus</span>
+  <span>Culture · Memory · Social Impact</span>
+</footer>
+
+</div>
+</body>
+</html>
